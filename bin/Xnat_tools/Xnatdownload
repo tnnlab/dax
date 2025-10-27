@@ -26,6 +26,7 @@ from netrc import netrc
 import logging
 import urllib
 from dax import XnatUtils
+from urllib.parse import urlparse
 from datetime import datetime
 
 
@@ -1777,7 +1778,7 @@ scans."
         else:
             HOST = os.environ["XNAT_HOST"]
 
-        USER, _, PWD = netrc().authenticators(HOST)
+        USER, _, PWD = netrc().authenticators(urlparse(HOST).hostname)
         MSG = "INFO: connection to xnat <%s>:" % (HOST)
         LOGGER.info(MSG)
         with XnatUtils.get_interface(host=HOST, user=USER, pwd=PWD) as XNAT:
