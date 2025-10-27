@@ -1,5 +1,9 @@
 ![](https://github.com/VUIIS/dax/blob/master/docs/images/dax_logo.png)
 Distributed Automation for XNAT
+
+This version is ported to run on the Pitt CRC via Slurm. Built and tested on python3.11.5, email = snyderid@upmc.edu
+
+
 ===
 
 # Install DAX
